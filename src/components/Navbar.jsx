@@ -11,7 +11,8 @@ const Navbar = () => {
                     <span className="text-3xl text-black flex items-center justify-center cursor-pointer font-medium"
                         onClick={() => {navigate('/')}}
                     >
-                        <i className="ri-trello-line mt-2 mr-2 text-4xl"></i>
+                        <img className='w-12 h-12' src="https://cdn-icons-png.flaticon.com/512/6802/6802191.png" alt="" />
+                        {/* <i className="ri-trello-line mt-2 mr-2 text-4xl"></i> */}
                         Typing<span className='text-[#ffb710]'>Verse</span>
                     </span>
                     <div className="hidden lg:block"  onClick={() => {navigate('/leaderboard') }}>
