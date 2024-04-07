@@ -112,7 +112,7 @@ const Home = () => {
         // console.log("username", username)
         // console.log("password", password)
         // console.log("speed ", speed)
-        const response = await axios.post('http://localhost:3000/post', { username, password, speed });
+        const response = await axios.post('https://typerverse-server-production.up.railway.app/post', { username, password, speed });
         // console.log("response", response.data)
         if (response.data.newUser) {
             // console.log("new user", response.data.newUser)
@@ -129,7 +129,7 @@ const Home = () => {
     }
     const updateScore = async () => {
         console.log(username, speed)
-        const response = await axios.post('http://localhost:3000/update', { username, speed });
+        const response = await axios.post('https://typerverse-server-production.up.railway.app/update', { username, speed });
         navigate('/leaderboard')
     }
     const handleKeyDown = (e) => {

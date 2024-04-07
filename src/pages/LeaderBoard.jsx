@@ -7,7 +7,7 @@ const LeaderBoard = () => {
   const [rankings, setRankings] = useState()
   useEffect(() => {
     const getRankings = async () => {
-      const response = await axios.get('http://localhost:3000/leaderboard', {});
+      const response = await axios.get('https://typerverse-server-production.up.railway.app/leaderboard', {});
       // console.log(response.data)
       setRankings(response.data)
       console.log('rankings ', rankings)
@@ -20,7 +20,7 @@ const LeaderBoard = () => {
         <Navbar />
       </div>
       <div className='flex flex-col items-center justify-start mt-20 w-screen px-3 rounded-md'>
-        <Table rankings = {rankings} />
+        <Table rankings={rankings} />
       </div>
     </div>
   )
