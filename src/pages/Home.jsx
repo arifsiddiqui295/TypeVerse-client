@@ -218,7 +218,11 @@ const Home = () => {
             {onFirst && <Typeanimation />}
             {!onFirst && (
                 start ? (
-                    <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-2xl pl-4 pr-4 md:pl-20 md:pr-20 lg:pl-24 lg:pr-24 xl:pl-28 xl:pr-28 pt-2'>
+                    <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-2xl pl-4 pr-4 md:pl-20 md:pr-20 lg:pl-24 lg:pr-24 xl:pl-28 xl:pr-28 pt-2'
+                    style={{
+                        userSelect:'none'
+                    }}
+                    >
                         {loadText}
                     </h1>
                 ) : (
@@ -232,7 +236,7 @@ const Home = () => {
                 value={inputValue}
                 onKeyDown={handleKeyDown}
                 ref={inputRef}
-                onChange={(e) => { setInputValue(e.target.value) }}
+                onChange={(e) => {setInputValue(e.target.value) }}
             />
             <div className='flex items-center justify-center gap-5'>
                 <div
